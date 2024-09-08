@@ -12,17 +12,25 @@ import {
   AccordionButton,
   AccordionPanel,
 } from '@chakra-ui/react'
-import { desc } from 'framer-motion/client'
+import ViewPoint from "./assets/viewpoint3.png"
+import CourseEater from "./assets/course-eater2.png"
 
-// import {
-//   Card,
-//   CardContent,
-//   CardDescription,
-//   CardFooter,
-//   CardHeader,
-//   CardTitle,
-// } from "@eslint/js"
 
+function Skill({ name }: any) {
+  return (
+    <>
+      <span className='skill-container'> {name} </span>
+    </>
+  )
+}
+
+function LinkTag({ name, link }: any) {
+  return (
+    <>
+      <a target="_blank" href={link}><span className='link-tag'> {name}</span> </a>
+    </>
+  )
+}
 
 function Tab({ id, onClick, children }: any) {
   return (
@@ -38,7 +46,6 @@ function ProjectCard({ imageURL, name, dateRange, description, skills, websiteLi
   return (
     <div className='card-container'>
       <div className='card-img-container'>
-        image here
         <img src={imageURL} />
 
       </div>
@@ -55,12 +62,14 @@ function ProjectCard({ imageURL, name, dateRange, description, skills, websiteLi
 
         <div className='card-footer-container'>
           <div className='card-skills-container'>
-            {skills}
+            {skills.map((skill: string) => {
+              return <Skill name={skill} />
+            })}
           </div>
 
           <div className='card-links-container'>
-            <a href={websiteLink}> Website {"   "} </a>
-            <a href={gitHubLink}> GitHub </a>
+            <LinkTag name="Website" />
+            <LinkTag name="GitHub" link="https://github.com/shayanhalder" />
           </div>
 
         </div>
@@ -281,8 +290,22 @@ function App() {
 
       <div id='projects' className='section'>
         <h1 className='medium-large teal-color'> Projects </h1>
-        <ProjectCard />
 
+        <div className='project-list'>
+
+
+          <ProjectCard name="Viewpoint" dateRange="August 2023 - February 2024"
+            description="Designed and developed full-stack web application to showcase news bias on currently trending topics."
+            skills={["React", "Node.js", "Express.js", "MongoDB", "Webscraping", "Sentiment Analysis"]}
+            imageURL={ViewPoint} />
+
+          <ProjectCard name="Course Eater" dateRange="April 2024 - July 2024"
+            description="Developed full-stack web application to allow students at UC Irvine to plan their 
+            course progression in a drag-drop interface. "
+            skills={["React", "Node.js", "Express.js", "MongoDB", "TypeScript"]}
+            imageURL={CourseEater} />
+
+        </div>
 
       </div>
 
