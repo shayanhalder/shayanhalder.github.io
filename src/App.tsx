@@ -5,6 +5,7 @@ import Email from "./assets/email.png"
 import Flow from "./assets/flow.jpeg"
 import NASA from "./assets/lspace.jpeg"
 import MLH from "./assets/mlh.jpeg"
+import Resume from "./assets/Shayan_Halder_resume.pdf"
 import './App.css'
 import {
   Accordion,
@@ -96,7 +97,7 @@ function App() {
       <h1 className='size-medium '> Fullstack Software Engineer | CS @ UCI </h1>
       <div className='tab-container'>
         <Tab onClick={() => scroll('root')}> About </Tab>
-        <Tab> <a href="src/assets/Shayan_Halder_resume.pdf" target='_blank'> Resume </a> </Tab>
+        <Tab> <a href={Resume} target='_blank'> Resume </a> </Tab>
         <Tab onClick={() => scroll('experience')}> Experience </Tab>
         <Tab onClick={() => scroll('projects')} id="last"> Projects </Tab>
       </div>
