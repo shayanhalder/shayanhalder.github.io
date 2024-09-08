@@ -1,19 +1,16 @@
 import BlurIn from './components/magicui/blur-in'
-import './App.css'
-import portrait from "./assets/portrait.jpg"
-import GradualSpacing from './components/magicui/gradual-spacing'
 import GitHub from "./assets/GitHub.png"
 import LinkedIn from "./assets/linkedin2.png"
 import Email from "./assets/email.png"
 import Flow from "./assets/flow.jpeg"
 import NASA from "./assets/lspace.jpeg"
 import MLH from "./assets/mlh.jpeg"
+import './App.css'
 import {
   Accordion,
   AccordionItem,
   AccordionButton,
   AccordionPanel,
-  AccordionIcon,
 } from '@chakra-ui/react'
 
 function Tab({ id, onClick, children }: any) {
