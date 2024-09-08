@@ -1,0 +1,218 @@
+:root {
+  --teal: rgb(97, 243, 238);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.teal-color {
+  color: var(--teal);
+}
+
+body {
+  background-color: rgb(28, 28, 28) !important;
+  /* background-color: whi */
+  color: white !important;
+}
+
+#root {
+  width: 100%;
+  padding: 2rem;
+}
+
+#page-root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+.size-medium {
+  font-size: 30px;
+}
+
+.tab-cover {
+  border-radius: 0.5em;
+  padding: 0.3em 0.5em;
+  transition: all 0.4s ease-out;
+  background-color: rgb(28, 28, 28);
+}
+.tab-cover:hover {
+  background-color: var(--teal);
+  color: black;
+  border-color: black;
+}
+.tab {
+  width: fit-content;
+  padding: 0.05em 0.75em;
+  border-right: 1px solid var(--teal);
+  transition: all 0.4s ease-out;
+  background-color: rgb(28, 28, 28);
+}
+
+.tab:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.last {
+  border: none;
+}
+
+.tab-container {
+  display: flex;
+  width: fit-content;
+  padding: 0.5em;
+  border-radius: 1em;
+  border: 1px solid var(--teal);
+  justify-content: center;
+  column-gap: 0.25em;
+  margin-top: 1em;
+  position: sticky;
+  background-color: rgb(28, 28, 28);
+  top: 1em;
+}
+.img-container {
+  display: flex;
+  justify-content: center;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
+}
+
+#github {
+  transform: scale(0.15);
+}
+
+#github {
+  border-radius: 50%;
+  transform: scale(0.8);
+  width: 40px;
+  height: auto;
+}
+
+#linkedin {
+  /* transform: scale(0.1); */
+  width: 30px;
+  /* border-radius: 50%; */
+}
+
+#email {
+  /* transform: scale(0.1); */
+  width: 40px;
+}
+
+.icon {
+  margin-right: 0.5em;
+}
+.name-hero {
+  font-size: 80px !important;
+  color: var(--teal);
+  font-weight: bold;
+  letter-spacing: -7px;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: center;
+  height: 5em;
+  width: 50%;
+  column-gap: 2em;
+}
+
+.icon-container div {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  align-items: center;
+}
+
+.medium-large {
+  font-size: 3em;
+}
+
+#about {
+  width: 50%;
+}
+
+#experience {
+  margin-top: 2em;
+  width: 50%;
+}
+
+.teal-border {
+  border-top: 1px solid var(--teal) !important;
+}
+
+#flow {
+  width: 3.4em;
+  height: 100%;
+}
+
+.experience-logo {
+  width: 3.4em;
+  height: 100%;
+}
+
+.experience-left {
+  display: flex;
+  /* justify-content: space-between; */
+  /* width: 50%; */
+  width: max-content;
+  font-size: 16px;
+  column-gap: 1em;
+}
+.experience-right {
+  width: 50%;
+}
+
+.experience-header {
+  width: fit-content;
+}
+
+.experience-header div {
+  width: max-content;
+}
+.company {
+  font-weight: bold;
+}
+
+.position {
+  font-size: 0.9em;
+}
+
+.experience-right {
+  text-align: right;
+  color: rgb(234, 234, 234);
+}
+
+ul li {
+  list-style-type: disc;
+}
+
+ul {
+  padding-left: 3em !important;
+  /* padding-right: 1.5em !important; */
+  font-size: 0.9em;
+}
+
+.accordion-item {
+  border-top: none;
+  border-bottom: none;
+  margin-bottom: 1em;
+  margin-top: 1em;
+}
