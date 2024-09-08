@@ -85,6 +85,7 @@ body {
   position: sticky;
   background-color: rgb(28, 28, 28);
   top: 1em;
+  z-index: 100;
 }
 .img-container {
   display: flex;
@@ -215,4 +216,78 @@ ul {
   border-bottom: none;
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+#projects {
+  margin-top: 2em;
+  width: 50%;
+}
+
+.section {
+  margin-top: 2em;
+  width: 50%;
+}
+
+.card-container {
+  width: 50%;
+  height: 375px;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.card-img-container {
+  height: 40%;
+  width: 100%;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+
+.card-body-container {
+  height: 60%;
+  width: 100%;
+  padding: 0.5em 0.5em;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5em;
+  align-items: flex-start;
+  border: 1px solid white;
+}
+
+.card-header-container {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid white;
+}
+
+.card-description-container {
+  width: 100%;
+  height: 35%;
+  border: 1px solid white;
+}
+
+.card-footer-container {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 1px solid white;
+}
+
+.card-skills-container {
+  width: 100%;
+  height: 66%;
+  border: 1px solid white;
+}
+
+.card-links-container {
+  width: 100%;
+  height: 33%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  border: 1px solid white;
 }
