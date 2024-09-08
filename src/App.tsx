@@ -12,6 +12,17 @@ import {
   AccordionButton,
   AccordionPanel,
 } from '@chakra-ui/react'
+import { desc } from 'framer-motion/client'
+
+// import {
+//   Card,
+//   CardContent,
+//   CardDescription,
+//   CardFooter,
+//   CardHeader,
+//   CardTitle,
+// } from "@eslint/js"
+
 
 function Tab({ id, onClick, children }: any) {
   return (
@@ -21,7 +32,42 @@ function Tab({ id, onClick, children }: any) {
       </div>
     </div>
   )
+}
 
+function ProjectCard({ imageURL, name, dateRange, description, skills, websiteLink, gitHubLink }: any) {
+  return (
+    <div className='card-container'>
+      <div className='card-img-container'>
+        image here
+        <img src={imageURL} />
+
+      </div>
+
+      <div className='card-body-container'>
+        <div className='card-header-container'>
+          <div> {name} </div>
+          <div> {dateRange} </div>
+        </div>
+
+        <div className='card-description-container'>
+          {description}
+        </div>
+
+        <div className='card-footer-container'>
+          <div className='card-skills-container'>
+            {skills}
+          </div>
+
+          <div className='card-links-container'>
+            <a href={websiteLink}> Website {"   "} </a>
+            <a href={gitHubLink}> GitHub </a>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  )
 }
 
 function App() {
@@ -64,7 +110,7 @@ function App() {
       </div>
 
 
-      <div id='about'>
+      <div id='about' className='section'>
         <h1 className='medium-large teal-color'> About </h1>
         <p> I'm a Computer Science student at UC Irvine specializing in <span className='teal-color'>Fullstack Web Development</span>. I love
           tackling difficult challenges head-on with <span className='teal-color'>growth-mindset</span> and a <span className='teal-color'>mission-driven mentality</span>. I'm
@@ -73,7 +119,7 @@ function App() {
         </p>
       </div>
 
-      <div id='experience'>
+      <div id='experience' className='section'>
         <h1 className='medium-large teal-color'> Experience </h1>
         <Accordion allowToggle>
           <AccordionItem className='accordion-item'>
@@ -231,19 +277,13 @@ function App() {
 
 
         </Accordion>
-        {/* <Accordion allowToggle>
-          <AccordionItem>
-            test
-            <AccordionPanel>
-              awef
-              aweoifjawoeifjaowieafowjiefjo
-              aweoifjawoeifjaowieafowjiefjofij
+      </div>
 
-            </AccordionPanel>
+      <div id='projects' className='section'>
+        <h1 className='medium-large teal-color'> Projects </h1>
+        <ProjectCard />
 
 
-          </AccordionItem> 
-        </Accordion> */}
       </div>
 
 
