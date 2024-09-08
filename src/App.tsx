@@ -47,9 +47,7 @@ function ProjectCard({ imageURL, name, dateRange, description, skills, websiteLi
     <div className='card-container'>
       <div className='card-img-container'>
         <img src={imageURL} />
-
       </div>
-
       <div className='card-body-container'>
         <div className='card-header-container'>
           <div> {name} </div>
@@ -68,8 +66,8 @@ function ProjectCard({ imageURL, name, dateRange, description, skills, websiteLi
           </div>
 
           <div className='card-links-container'>
-            <LinkTag name="Website" />
-            <LinkTag name="GitHub" link="https://github.com/shayanhalder" />
+            <LinkTag name="Website" link={websiteLink} />
+            <LinkTag name="GitHub" link={gitHubLink} />
           </div>
 
         </div>
@@ -95,26 +93,31 @@ function App() {
 
       <h1 className='size-medium '> Hey! I'm </h1>
       <BlurIn word={"Shayan"} duration={1.7} className='name-hero'></BlurIn>
-      {/* <GradualSpacing text={"Shayan"} className='name-hero'></GradualSpacing> */}
       <h1 className='size-medium '> Fullstack Software Engineer | CS @ UCI </h1>
       <div className='tab-container'>
-        <Tab onClick={() => scroll('about')}> About </Tab>
+        <Tab onClick={() => scroll('root')}> About </Tab>
         <Tab> <a href="src/assets/Shayan_Halder_resume.pdf" target='_blank'> Resume </a> </Tab>
         <Tab onClick={() => scroll('experience')}> Experience </Tab>
-        <Tab id="last"> Projects </Tab>
+        <Tab onClick={() => scroll('projects')} id="last"> Projects </Tab>
       </div>
       <div className='icon-container'>
         <div>
-          <img src={GitHub} id="github" className='icon' />
-          GitHub
+          <a href="https://github.com/shayanhalder" target='_blank'>
+            <img src={GitHub} id="github" className='icon' />
+            GitHub
+          </a>
         </div>
         <div>
-          <img src={LinkedIn} id="linkedin" className='icon' />
-          LinkedIn
+          <a href="https://linkedin.com/in/shalder27" target='_blank'>
+            <img src={LinkedIn} id="linkedin" className='icon' />
+            LinkedIn
+          </a>
         </div>
         <div>
-          <img src={Email} id="email" className='icon' />
-          Email
+          <a href="malito:shayanhalder2389@gmail.com">
+            <img src={Email} id="email" className='icon' />
+            Email
+          </a>
         </div>
       </div>
 
@@ -183,7 +186,6 @@ function App() {
               </ul>
             </AccordionPanel>
           </AccordionItem>
-
           <AccordionItem className='accordion-item'>
             <h2>
               <AccordionButton>
@@ -208,83 +210,6 @@ function App() {
               </ul>
             </AccordionPanel>
           </AccordionItem>
-
-          <AccordionItem className='accordion-item'>
-            <h2>
-              <AccordionButton>
-                <div className='experience-left'>
-                  <img src={MLH} className='experience-logo' />
-                  <div className='experience-header'>
-                    <div className='company'>Meta x Major League Hacking Fellowship </div>
-                    <div className='position'>Site Reliability Engineering Fellow</div>
-                  </div>
-                </div>
-                <div className='experience-right'>
-                  May 2024 - August 2024
-                </div>
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <ul>
-                <li> Completed 12-weeks of structured curriculum covering core SRE concepts, supplemented with events and workshops hosted by leading Meta industry experts.</li>
-                <li> Created an open-source personal portfolio website template using Python, Flask, Jinja, MySQL, Nginx, and unittest. </li>
-                <li> Automated testing and deployment workflows with bash scripting and GitHub Actions CI/CD tools.</li>
-                <li> Implemented monitoring and visualization of CPU/RAM/Disk utilization of Docker containers on VPS with Prometheus and Grafana.</li>
-              </ul>
-            </AccordionPanel>
-          </AccordionItem>
-
-          <AccordionItem className='accordion-item'>
-            <h2>
-              <AccordionButton>
-                <div className='experience-left'>
-                  <img src={MLH} className='experience-logo' />
-                  <div className='experience-header'>
-                    <div className='company'>Meta x Major League Hacking Fellowship </div>
-                    <div className='position'>Site Reliability Engineering Fellow</div>
-                  </div>
-                </div>
-                <div className='experience-right'>
-                  May 2024 - August 2024
-                </div>
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <ul>
-                <li> Completed 12-weeks of structured curriculum covering core SRE concepts, supplemented with events and workshops hosted by leading Meta industry experts.</li>
-                <li> Created an open-source personal portfolio website template using Python, Flask, Jinja, MySQL, Nginx, and unittest. </li>
-                <li> Automated testing and deployment workflows with bash scripting and GitHub Actions CI/CD tools.</li>
-                <li> Implemented monitoring and visualization of CPU/RAM/Disk utilization of Docker containers on VPS with Prometheus and Grafana.</li>
-              </ul>
-            </AccordionPanel>
-          </AccordionItem>
-          <AccordionItem className='accordion-item'>
-            <h2>
-              <AccordionButton>
-                <div className='experience-left'>
-                  <img src={MLH} className='experience-logo' />
-                  <div className='experience-header'>
-                    <div className='company'>Meta x Major League Hacking Fellowship </div>
-                    <div className='position'>Site Reliability Engineering Fellow</div>
-                  </div>
-                </div>
-                <div className='experience-right'>
-                  May 2024 - August 2024
-                </div>
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <ul>
-                <li> Completed 12-weeks of structured curriculum covering core SRE concepts, supplemented with events and workshops hosted by leading Meta industry experts.</li>
-                <li> Created an open-source personal portfolio website template using Python, Flask, Jinja, MySQL, Nginx, and unittest. </li>
-                <li> Automated testing and deployment workflows with bash scripting and GitHub Actions CI/CD tools.</li>
-                <li> Implemented monitoring and visualization of CPU/RAM/Disk utilization of Docker containers on VPS with Prometheus and Grafana.</li>
-              </ul>
-            </AccordionPanel>
-          </AccordionItem>
-
-
-
         </Accordion>
       </div>
 
@@ -292,20 +217,22 @@ function App() {
         <h1 className='medium-large teal-color'> Projects </h1>
 
         <div className='project-list'>
-
-
           <ProjectCard name="Viewpoint" dateRange="August 2023 - February 2024"
             description="Designed and developed full-stack web application to showcase news bias on currently trending topics."
             skills={["React", "Node.js", "Express.js", "MongoDB", "Webscraping", "Sentiment Analysis"]}
-            imageURL={ViewPoint} />
+            imageURL={ViewPoint} websiteLink="https://viewpoint-app.netlify.app/" gitHubLink="https://github.com/shayanhalder/Viewpoint-News-App/" />
 
           <ProjectCard name="Course Eater" dateRange="April 2024 - July 2024"
-            description="Developed full-stack web application to allow students at UC Irvine to plan their 
+            description="Developed full-stack web application in a team of 3 other developers to allow students at UC Irvine to plan their 
             course progression in a drag-drop interface. "
             skills={["React", "Node.js", "Express.js", "MongoDB", "TypeScript"]}
-            imageURL={CourseEater} />
+            imageURL={CourseEater} websiteLink="https://course-eater.space" gitHubLink="https://github.com/NeatPatel/course-planner" />
 
         </div>
+      </div>
+
+      <div id='footer'>
+        Made with &#x2764; by <a href="https://github.com/shayanhalder" target='_blank'>@shayanhalder</a>.
 
       </div>
 
