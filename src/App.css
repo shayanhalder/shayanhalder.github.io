@@ -245,6 +245,7 @@ ul {
   flex-direction: row;
   flex-wrap: wrap;
   column-gap: 1em;
+  row-gap: 1em;
 }
 
 .section {

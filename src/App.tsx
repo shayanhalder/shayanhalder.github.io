@@ -6,6 +6,8 @@ import Flow from "./assets/flow.jpeg"
 import NASA from "./assets/lspace.jpeg"
 import MLH from "./assets/mlh.jpeg"
 import Resume from "./assets/Shayan_Halder_resume.pdf"
+import Steganography from "./assets/steganography.webp"
+import GroupDinner from "./assets/group-dinner.png"
 import './App.css'
 import {
   Accordion,
@@ -15,6 +17,7 @@ import {
 } from '@chakra-ui/react'
 import ViewPoint from "./assets/viewpoint3.png"
 import CourseEater from "./assets/course-eater2.png"
+
 
 
 function Skill({ name }: any) {
@@ -67,7 +70,7 @@ function ProjectCard({ imageURL, name, dateRange, description, skills, websiteLi
           </div>
 
           <div className='card-links-container'>
-            <LinkTag name="Website" link={websiteLink} />
+            {websiteLink && <LinkTag name="Website" link={websiteLink} />}
             <LinkTag name="GitHub" link={gitHubLink} />
           </div>
 
@@ -228,7 +231,16 @@ function App() {
             course progression in a drag-drop interface. "
             skills={["React", "Node.js", "Express.js", "MongoDB", "TypeScript"]}
             imageURL={CourseEater} websiteLink="https://course-eater.space" gitHubLink="https://github.com/NeatPatel/course-planner" />
+          
+          <ProjectCard name="Image Encrypter" dateRange="September 2024 - Present"
+            description="Developed full-stack web application to encrypt and decrypt secret messages inside image files.   "
+            skills={["Python", "Django", "AWS S3", "AWS Cloudfront", "React", "TypeScript", "SQL"]}
+            imageURL={Steganography} gitHubLink="https://github.com/shayanhalder/image-encrypter" />
 
+          <ProjectCard name="Group Dinner Price Tracker" dateRange="January 2024 - February 2024"
+            description="Developed frontend application to track costs owed by each person at a group dinner for group and individual food items. "
+            skills={["React", "TypeScript", "HTML", "CSS"]}
+            imageURL={GroupDinner} websiteLink="https://group-dinner-calculator.netlify.app/" gitHubLink="https://github.com/shayanhalder/Group-Dinner-Cost-Calculator" />
         </div>
       </div>
 
