@@ -181,16 +181,25 @@ body {
   height: 100%;
 }
 
+.accordion-container {
+  display: flex;
+  width: 100%;
+  /* flex-direction: column;
+  row-gap: 1em; */
+}
+
 .experience-left {
   display: flex;
-  /* justify-content: space-between; */
-  /* width: 50%; */
   width: max-content;
   font-size: 16px;
   column-gap: 1em;
 }
 .experience-right {
-  width: 50%;
+  /* width: 50%; */
+  display: flex;
+  margin-left: auto;
+  /* text-align: right; */
+  /* float: right; */
 }
 
 .experience-header {
@@ -228,6 +237,14 @@ ul {
   border-bottom: none;
   margin-bottom: 1em;
   margin-top: 1em;
+}
+
+.accordion-item h2 {
+    transition: all 0.4s ease-out;
+}
+
+.accordion-item h2:hover {
+  background-color: #4cbeba;
 }
 
 #projects {

@@ -3,6 +3,7 @@ import GitHub from "./assets/GitHub.png"
 import LinkedIn from "./assets/linkedin2.png"
 import Email from "./assets/email.png"
 import Flow from "./assets/flow.jpeg"
+import Meta from "./assets/meta.jpeg"
 import NASA from "./assets/lspace.jpeg"
 import MLH from "./assets/mlh.jpeg"
 import Resume from "./assets/Shayan_Halder_resume.pdf"
@@ -128,28 +129,53 @@ function App() {
 
       <div id='about' className='section'>
         <h1 className='medium-large teal-color'> About </h1>
-        <p> I'm a Computer Science student at UC Irvine specializing in <span className='teal-color'>Fullstack Web Development</span>. I love
-          tackling difficult challenges head-on with <span className='teal-color'>growth-mindset</span> and a <span className='teal-color'>mission-driven mentality</span>. I'm
-          inspired by the endless pursuit of knowledge in Software Development, knowing that there's more to learn
-          than can be done in several lifetimes.
+        <p> I'm a Computer Science student at UC Irvine specializing in <span className='teal-color'>backend development</span> and <span className='teal-color'>reliability engineering</span>.
+          Currently interning as a Software Engineer as Meta learning how to build reliable and scalable infrastructure.
         </p>
       </div>
 
       <div id='experience' className='section'>
         <h1 className='medium-large teal-color'> Experience </h1>
-        <Accordion allowToggle>
+        <Accordion allowMultiple={true}>
+            <AccordionItem className='accordion-item'>
+              <h2>
+                <AccordionButton>
+                  <div className='accordion-container'>
+                    <div className='experience-left'>
+                      <img src={Meta} id='flow' />
+                      <div className='experience-header'>
+                        <div className='company'>Meta</div>
+                        <div className='position'>Software Engineer Intern</div>
+                      </div>
+                    </div>
+                    <div className='experience-right'>
+                      June 2025 - Present
+                    </div>
+                  </div>
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <ul>
+                  <li> Infrastructure capacity monitoring framework to analyze usage of virtual resource dependencies and alert teams of potential reliability risks for their service. </li>
+                </ul>
+              </AccordionPanel>
+            </AccordionItem>
+          {/* </div> */}
+
           <AccordionItem className='accordion-item'>
             <h2>
               <AccordionButton>
-                <div className='experience-left'>
-                  <img src={Flow} id='flow' />
-                  <div className='experience-header'>
-                    <div className='company'>Flow Global Software Technologies </div>
-                    <div className='position'>Software Development Intern</div>
+                <div className='accordion-container'>
+                  <div className='experience-left'>
+                    <img src={Flow} id='flow' />
+                    <div className='experience-header'>
+                      <div className='company'>Flow Global Software Technologies </div>
+                      <div className='position'>Software Development Intern</div>
+                    </div>
                   </div>
-                </div>
-                <div className='experience-right'>
-                  April 2024 - August 2024
+                  <div className='experience-right'>
+                    April 2024 - August 2024
+                  </div>
                 </div>
               </AccordionButton>
             </h2>
@@ -167,15 +193,17 @@ function App() {
           <AccordionItem className='accordion-item'>
             <h2>
               <AccordionButton>
-                <div className='experience-left'>
-                  <img src={NASA} className='experience-logo' />
-                  <div className='experience-header'>
-                    <div className='company'>NASA L'SPACE Mission Concept Academy </div>
-                    <div className='position'>Computer Engineering Planner</div>
+                <div className='accordion-container'>
+                  <div className='experience-left'>
+                    <img src={NASA} className='experience-logo' />
+                    <div className='experience-header'>
+                      <div className='company'>NASA L'SPACE Mission Concept Academy </div>
+                      <div className='position'>Software Engineer</div>
+                    </div>
                   </div>
-                </div>
-                <div className='experience-right'>
-                  May 2024 - August 2024
+                  <div className='experience-right'>
+                    May 2024 - August 2024
+                  </div>
                 </div>
               </AccordionButton>
             </h2>
@@ -193,16 +221,18 @@ function App() {
           <AccordionItem className='accordion-item'>
             <h2>
               <AccordionButton>
-                <div className='experience-left'>
-                  <img src={MLH} className='experience-logo' />
-                  <div className='experience-header'>
-                    <div className='company'>Meta x Major League Hacking Fellowship </div>
-                    <div className='position'>Site Reliability Engineering Fellow</div>
+              <div className='accordion-container'>
+                  <div className='experience-left'>
+                    <img src={MLH} className='experience-logo' />
+                    <div className='experience-header'>
+                      <div className='company'>Meta x Major League Hacking Fellowship </div>
+                      <div className='position'>Site Reliability Engineering Fellow</div>
+                    </div>
                   </div>
-                </div>
-                <div className='experience-right'>
-                  May 2024 - August 2024
-                </div>
+                  <div className='experience-right'>
+                    May 2024 - August 2024
+                  </div>
+              </div>
               </AccordionButton>
             </h2>
             <AccordionPanel pb={4}>
@@ -224,7 +254,7 @@ function App() {
           <ProjectCard name="Viewpoint" dateRange="August 2023 - February 2024"
             description="Designed and developed full-stack web application to showcase news bias on currently trending topics."
             skills={["React", "Node.js", "Express.js", "MongoDB", "Webscraping", "Sentiment Analysis"]}
-            imageURL={ViewPoint} websiteLink="https://viewpoint-app.netlify.app/" gitHubLink="https://github.com/shayanhalder/Viewpoint-News-App/" />
+            imageURL={ViewPoint} websiteLink="https://shayanhalder.me/Viewpoint-News-App" gitHubLink="https://github.com/shayanhalder/Viewpoint-News-App/" />
 
           <ProjectCard name="Course Eater" dateRange="April 2024 - July 2024"
             description="Developed full-stack web application in a team of 3 other developers to allow students at UC Irvine to plan their 
