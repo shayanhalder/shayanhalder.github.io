@@ -6,7 +6,6 @@ import Flow from "./assets/flow.jpeg"
 import Meta from "./assets/meta.jpeg"
 import NASA from "./assets/lspace.jpeg"
 import UCI from "./assets/uci ics.jpeg"
-import Resume from "./assets/Shayan_Halder_resume.pdf"
 import Steganography from "./assets/steganography.webp"
 import GroupDinner from "./assets/group-dinner.png"
 import './App.css'
@@ -101,7 +100,7 @@ function App() {
       {/* <h1 className='size-medium '> Fullstack Software Engineer | CS @ UCI </h1> */}
       <div className='tab-container'>
         <Tab onClick={() => scroll('root')}> About </Tab>
-        <Tab> <a href={Resume} target='_blank'> Resume </a> </Tab>
+        <Tab> <a href="https://drive.google.com/file/d/14H_v9ZOPF1GHhif_QLOvJZsvr6M-JvPD/view?usp=sharing" target='_blank'> Resume </a> </Tab>
         <Tab onClick={() => scroll('experience')}> Experience </Tab>
         <Tab onClick={() => scroll('projects')} id="last"> Projects </Tab>
       </div>
