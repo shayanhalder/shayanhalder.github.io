@@ -1,3 +1,7 @@
+@import url("https://cdn.jsdelivr.net/gh/vsalvino/computer-modern@main/fonts/serif.css");
+@import url("https://cdn.jsdelivr.net/gh/vsalvino/computer-modern@main/fonts/typewriter.css");
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+
 :root {
   --teal: rgb(97, 243, 238);
 }
@@ -12,7 +16,6 @@ html {
 body {
   /* background-color: rgb(38, 38, 38) !important; */
   background-color: rgb(8, 9, 10) !important;
-  /* background-color: whi */
   color: white !important;
 }
 
@@ -82,7 +85,7 @@ body {
   border: 1px solid var(--teal);
   justify-content: center;
   column-gap: 0.25em;
-  margin-top: 1em;
+  margin-top: 0.5em;
   position: sticky;
   background-color: rgb(28, 28, 28);
   top: 1em;
@@ -123,10 +126,19 @@ body {
   margin-right: 0.5em;
 }
 .name-hero {
+  font-family: 'Georgia', 'Computer Modern Serif';
   font-size: 80px !important;
   color: var(--teal);
-  font-weight: bold;
-  letter-spacing: -7px;
+  letter-spacing: -2px;
+  font-weight: normal !important;
+}
+
+.sub-name-hero {
+  font-size: 30px !important;
+  font-weight: normal !important;
+  padding: 0px 0px !important;
+  margin: 0px 0px !important;
+  line-height: 2em !important;
 }
 
 .icon-container {
@@ -171,6 +183,12 @@ body {
   border-top: 1px solid var(--teal) !important;
 }
 
+#meta {
+  width: 3.4em;
+  height: 100%;
+}
+
+
 #flow {
   width: 3.4em;
   height: 100%;
@@ -184,6 +202,7 @@ body {
 .accordion-container {
   display: flex;
   width: 100%;
+  /* border-radius: 10%; */
   /* flex-direction: column;
   row-gap: 1em; */
 }
@@ -237,14 +256,22 @@ ul {
   border-bottom: none;
   margin-bottom: 1em;
   margin-top: 1em;
+  background-color: #151921;
+  border-radius: 1em;
 }
 
+.chakra-accordion__button {
+  padding-top: 0.75em !important;
+}
 .accordion-item h2 {
-    transition: all 0.4s ease-out;
+  border-radius: 1em;
+  /* padding-top: 0.5em; */
+  /* height: 10%; */
+  transition: all 0.4s ease-out !important;
 }
 
 .accordion-item h2:hover {
-  background-color: #4cbeba;
+  background-color: #39445a;
 }
 
 #projects {

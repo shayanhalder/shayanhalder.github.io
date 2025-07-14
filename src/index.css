@@ -58,7 +58,7 @@
     --chart-5: 340 75% 55%;
   }
 }
-
+/* 
 @layer base {
   * {
     @apply tailwind.config.jsborder-border;
@@ -66,4 +66,4 @@
   body {
     @apply tailwind.config.jsbg-background tailwind.config.jstext-foreground;
   }
-}
+} */

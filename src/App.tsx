@@ -5,6 +5,7 @@ import Email from "./assets/email.png"
 import Flow from "./assets/flow.jpeg"
 import Meta from "./assets/meta.jpeg"
 import NASA from "./assets/lspace.jpeg"
+import Name from "./assets/manim-name-final.gif"
 import MLH from "./assets/mlh.jpeg"
 import Resume from "./assets/Shayan_Halder_resume.pdf"
 import Steganography from "./assets/steganography.webp"
@@ -96,9 +97,9 @@ function App() {
   return (
     <div id='page-root'>
 
-      <h1 className='size-medium '> Hey! I'm </h1>
-      <BlurIn word={"Shayan"} duration={1.7} className='name-hero'></BlurIn>
-      <h1 className='size-medium '> Fullstack Software Engineer | CS @ UCI </h1>
+      <BlurIn word={"Shayan Halder"} duration={1.7} className='name-hero'></BlurIn>
+      <BlurIn word={"Software Engineer | CS @ UC Irvine"} duration={1.7} className='sub-name-hero'></BlurIn>
+      {/* <h1 className='size-medium '> Fullstack Software Engineer | CS @ UCI </h1> */}
       <div className='tab-container'>
         <Tab onClick={() => scroll('root')}> About </Tab>
         <Tab> <a href={Resume} target='_blank'> Resume </a> </Tab>
@@ -136,13 +137,13 @@ function App() {
 
       <div id='experience' className='section'>
         <h1 className='medium-large teal-color'> Experience </h1>
-        <Accordion allowMultiple={true}>
+        <Accordion allowMultiple={true} defaultIndex={[0, 1, 2, 3]}>
             <AccordionItem className='accordion-item'>
               <h2>
                 <AccordionButton>
                   <div className='accordion-container'>
                     <div className='experience-left'>
-                      <img src={Meta} id='flow' />
+                      <img src={Meta} id='meta' />
                       <div className='experience-header'>
                         <div className='company'>Meta</div>
                         <div className='position'>Software Engineer Intern</div>
