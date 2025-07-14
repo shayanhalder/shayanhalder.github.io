@@ -5,8 +5,7 @@ import Email from "./assets/email.png"
 import Flow from "./assets/flow.jpeg"
 import Meta from "./assets/meta.jpeg"
 import NASA from "./assets/lspace.jpeg"
-import Name from "./assets/manim-name-final.gif"
-import MLH from "./assets/mlh.jpeg"
+import UCI from "./assets/uci ics.jpeg"
 import Resume from "./assets/Shayan_Halder_resume.pdf"
 import Steganography from "./assets/steganography.webp"
 import GroupDinner from "./assets/group-dinner.png"
@@ -143,7 +142,7 @@ function App() {
                 <AccordionButton>
                   <div className='accordion-container'>
                     <div className='experience-left'>
-                      <img src={Meta} id='meta' />
+                      <img src={Meta} className='experience-logo' />
                       <div className='experience-header'>
                         <div className='company'>Meta</div>
                         <div className='position'>Software Engineer Intern</div>
@@ -161,14 +160,39 @@ function App() {
                 </ul>
               </AccordionPanel>
             </AccordionItem>
-          {/* </div> */}
+          <AccordionItem className='accordion-item'>
+              <h2>
+                <AccordionButton>
+                  <div className='accordion-container'>
+                    <div className='experience-left'>
+                      <img src={UCI} className='experience-logo'/>
+                      <div className='experience-header'>
+                        <div className='company'>Hayes Lab, UC Irvine</div>
+                        <div className='position'>Software Developer</div>
+                      </div>
+                    </div>
+                    <div className='experience-right'>
+                      September 2024 - Present
+                    </div>
+                  </div>
+                </AccordionButton>
+              </h2>
+              <AccordionPanel pb={4}>
+                <ul>
+                  <li> Developed full-stack app for SANA, a network alignment algorithm used for biological graph comparisons. </li>
+                  <li> Optimized a Node.js command-line pipeline for faster execution of network alignment jobs. </li>
+                  <li> Automated deployment of backend reverse proxy with bash scripting and Systemd. </li>
+                  <li> Configured Vagrant virtual machine with Ubuntu to isolate compiler dependencies. </li>
+                </ul>
+              </AccordionPanel>
+            </AccordionItem>
 
           <AccordionItem className='accordion-item'>
             <h2>
               <AccordionButton>
                 <div className='accordion-container'>
                   <div className='experience-left'>
-                    <img src={Flow} id='flow' />
+                    <img src={Flow} className='experience-logo' />
                     <div className='experience-header'>
                       <div className='company'>Flow Global Software Technologies </div>
                       <div className='position'>Software Development Intern</div>
@@ -216,32 +240,6 @@ function App() {
                 <li> Produced software architecture flowchart and pseudocode to integrate requirements from thermal, power, and
                   payload subsystems.</li>
                 <li> Developed recovery/redundancy protocol to autonomously regulate rover subsystem health metrics.</li>
-              </ul>
-            </AccordionPanel>
-          </AccordionItem>
-          <AccordionItem className='accordion-item'>
-            <h2>
-              <AccordionButton>
-              <div className='accordion-container'>
-                  <div className='experience-left'>
-                    <img src={MLH} className='experience-logo' />
-                    <div className='experience-header'>
-                      <div className='company'>Meta x Major League Hacking Fellowship </div>
-                      <div className='position'>Site Reliability Engineering Fellow</div>
-                    </div>
-                  </div>
-                  <div className='experience-right'>
-                    May 2024 - August 2024
-                  </div>
-              </div>
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              <ul>
-                <li> Completed 12-weeks of structured curriculum covering core SRE concepts, supplemented with events and workshops hosted by leading Meta industry experts.</li>
-                <li> Created an open-source personal portfolio website template using Python, Flask, Jinja, MySQL, Nginx, and unittest. </li>
-                <li> Automated testing and deployment workflows with bash scripting and GitHub Actions CI/CD tools.</li>
-                <li> Implemented monitoring and visualization of CPU/RAM/Disk utilization of Docker containers on VPS with Prometheus and Grafana.</li>
               </ul>
             </AccordionPanel>
           </AccordionItem>

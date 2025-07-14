@@ -183,6 +183,11 @@ body {
   border-top: 1px solid var(--teal) !important;
 }
 
+#uci {
+  width: 3.4em;
+  height: 100%;
+}
+
 #meta {
   width: 3.4em;
   height: 100%;
