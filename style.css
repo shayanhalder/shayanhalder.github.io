@@ -1,0 +1,186 @@
+:root {
+    --bg-color: #2c2c2c;
+    --text-color: #e0e0e0;
+    --primary-color: #ffffff;
+    --secondary-color: #a0a0a0;
+    --accent-color: #61dafb; /* A subtle accent color */
+    --panel-bg-color: #383838;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Lato', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+/* --- Header & Typography --- */
+header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.main-title {
+    font-family: 'Georgia', serif;
+    font-size: 3.5rem;
+    font-weight: normal;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+h2 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--panel-bg-color);
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--primary-color);
+}
+
+/* --- About Section --- */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--secondary-color);
+    font-size: 1.8rem;
+    margin-right: 25px;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--primary-color);
+}
+
+/* --- Experience Accordion --- */
+.accordion {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--panel-bg-color);
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.4s ease;
+}
+
+.accordion:hover, .accordion.active {
+    background-color: var(--panel-bg-color);
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.company-logo {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.job-title {
+    flex-grow: 1;
+    line-height: 1.4em;
+}
+
+.job-title h3, .job-title p {
+    margin: 0;
+}
+
+.job-title h3 {
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    /* font-weight: 700; */
+    font-weight: normal;
+}
+
+.job-title p {
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+}
+
+.job-period p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--secondary-color);
+    white-space: nowrap;
+}
+
+.panel {
+    padding: 0px 18px;
+    background-color: var(--panel-bg-color);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.panel ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    /* margin-top: 15px; */
+    margin-bottom: 15px;
+    margin-left: 2.2em;
+}
+
+.panel li {
+    margin-bottom: 10px;
+}
+
+/* --- Projects & Publications --- */
+.project-item, .publication-item {
+    margin-bottom: 20px;
+    /* margin-left: 1em; */
+}
+
+.project-item h3 {
+    margin: 0 0 5px 0;
+    color: var(--primary-color);
+    font-weight: 700;
+    margin-left: 1em;
+}
+
+.project-item p {
+    margin-left: 2em;
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
