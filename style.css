@@ -44,7 +44,7 @@ header {
 
 h2 {
     font-family: 'Georgia', 'Lato', sans-serif;
-    font-weight: 700;
+    font-weight: 700; 
     font-size: 1.5rem;
     color: var(--primary-color);
     border-bottom: 1px solid var(--panel-bg-color);
