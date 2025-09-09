@@ -1,10 +1,10 @@
 :root {
-    --bg-color: #2c2c2c;
+    --bg-color: #1f1f1f;
     --text-color: #e0e0e0;
     --primary-color: #ffffff;
     --secondary-color: #a0a0a0;
     --accent-color: #61dafb; /* A subtle accent color */
-    --panel-bg-color: #383838;
+    --panel-bg-color: #313131;
 }
 
 body {
@@ -44,7 +44,7 @@ header {
 
 h2 {
     font-family: 'Georgia', 'Lato', sans-serif;
-    font-weight: 700; 
+    font-weight: normal;
     font-size: 1.5rem;
     color: var(--primary-color);
     border-bottom: 1px solid var(--panel-bg-color);
@@ -124,7 +124,6 @@ a:hover {
 .job-title h3 {
     font-size: 1.1rem;
     color: var(--primary-color);
-    /* font-weight: 700; */
     font-weight: normal;
 }
 
@@ -169,7 +168,7 @@ a:hover {
 .project-item h3 {
     margin: 0 0 5px 0;
     color: var(--primary-color);
-    font-weight: 700;
+    /* font-weight: 700; */
     margin-left: 1em;
 }
 
