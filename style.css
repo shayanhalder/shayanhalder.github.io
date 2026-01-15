@@ -7,6 +7,10 @@
     --panel-bg-color: #313131;
 }
 
+html {
+    overscroll-behavior: none;
+}
+
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
