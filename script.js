@@ -3,17 +3,13 @@ document.addEventListener("DOMContentLoaded", function() {
 
     accordions.forEach(acc => {
         acc.addEventListener("click", function() {
-            // Toggle the 'active' class for styling purposes
             this.classList.toggle("active");
-
-            // Get the panel element that is the next sibling
             const panel = this.nextElementSibling;
 
-            // Expand or collapse the panel
             if (panel.style.maxHeight) {
-                panel.style.maxHeight = null; // Collapse
+                panel.style.maxHeight = null; // collapse
             } else {
-                panel.style.maxHeight = panel.scrollHeight + "px"; // Expand
+                panel.style.maxHeight = panel.scrollHeight + "px"; // expand
             }
         });
     });
