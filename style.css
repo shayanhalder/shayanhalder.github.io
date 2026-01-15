@@ -3,7 +3,7 @@
     --text-color: #e0e0e0;
     --primary-color: #ffffff;
     --secondary-color: #a0a0a0;
-    --accent-color: #61dafb; /* A subtle accent color */
+    --accent-color: #61dafb; 
     --panel-bg-color: #313131;
 }
 
@@ -26,7 +26,6 @@ body {
     padding: 20px;
 }
 
-/* --- Header & Typography --- */
 header {
     text-align: center;
     margin-bottom: 60px;
@@ -172,17 +171,53 @@ a:hover {
     margin-bottom: 20px;
 }
 
+.project-item {
+    border: 1px solid var(--panel-bg-color);
+    border-radius: 8px;
+    padding: 18px;
+    background-color: var(--bg-color);
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.project-item:hover {
+    border-color: var(--primary-color);
+    background-color: var(--panel-bg-color);
+}
+
 .project-item h3 {
     margin: 0 0 5px 0;
     color: var(--primary-color);
-    margin-left: 1em;
+    margin-left: 0;
 }
 
-.project-item p {
-    margin-left: 2em;
+.project-links {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    flex-wrap: wrap;
 }
 
-/* --- Footer --- */
+.project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background-color: var(--panel-bg-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.project-link:hover {
+    background-color: var(--secondary-color);
+}
+
+.project-link i {
+    font-size: 0.95rem;
+}
+
 footer {
     text-align: center;
     margin-top: 60px;
@@ -190,7 +225,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* --- Responsive Design --- */
 @media (max-width: 640px) {
     .main-title {
         font-size: 2.8rem;
