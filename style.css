@@ -26,6 +26,12 @@ body {
     padding: 20px;
 }
 
+.project-page-container {
+    max-width: 800px;
+    margin: 25px auto;
+    padding: 10px;
+}
+
 header {
     text-align: center;
     margin-bottom: 60px;
@@ -43,6 +49,22 @@ header {
     font-size: 1.2rem;
     color: var(--secondary-color);
     margin-top: 5px;
+}
+
+h1 {
+    font-family: 'Georgia', 'Lato', sans-serif;
+    font-weight: normal;
+    font-size: 2rem;
+    color: var(--primary-color);
+    /* border-bottom: 1px solid var(--panel-bg-color); */
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 25px;
+
+}
+
+.bottom-border {
+    border-bottom: 1px solid var(--panel-bg-color);
 }
 
 h2 {
